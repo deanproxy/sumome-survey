@@ -1,0 +1,27 @@
+.login {
+  padding: 20px;
+  width: 350px;
+  border: 1px solid #666;
+  margin: 20px auto;
+  border-radius: 5px; }
+  .login #message {
+    color: #e74c3c;
+    font-size: 1.2em; }
+  .login p {
+    font-size: .8em;
+    color: #666; }
+  .login h2 {
+    margin-bottom: 20px; }
+  .login ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .login ul li {
+      margin-bottom: 20px; }
+  .login button {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px; }
+  .login input {
+    width: 100%; }

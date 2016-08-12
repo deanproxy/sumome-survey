@@ -1,0 +1,63 @@
+@import 'global';
+
+.danger {
+    color: $danger;
+}
+@mixin input-mixin {
+    font-size: 1.5em;
+    padding: 10px;
+    outline-color: #aaa;
+}
+input {
+    @include input-mixin;
+}
+textarea {
+    @include input-mixin;
+}
+#react {
+    margin-top: 90px;
+}
+
+.question {
+    margin: 0 auto;
+    width: 600px;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li a {
+            display: block;
+            margin-bottom: 5px;
+            padding: 20px;
+            font-size: 1.5em;
+            border: 1px solid #666;
+            border-radius: 2px;
+            color: inherit;
+            text-decoration: none;
+            &:hover {
+                background-color: #eee;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            &:active {
+                text-decoration: none;
+            }
+            &.selected {
+                background-color: #eee;
+            }
+            i {
+                float: right;
+                margin-top: 5px;
+                color: $success;
+            }
+        }
+    }
+    button {
+        width: 100%;
+        font-size: 1.5em;
+    }
+}
+.thanks {
+    margin: 0 auto;
+    width: 600px;
+}

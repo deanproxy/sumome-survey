@@ -1,0 +1,60 @@
+.modal-dialog {
+  width: 800px;
+  background-color: #fff; }
+  .modal-dialog ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .modal-dialog ul li {
+      margin-bottom: 10px; }
+      .modal-dialog ul li:first-child {
+        margin-bottom: 20px; }
+      .modal-dialog ul li input {
+        width: 100%; }
+
+.admin {
+  width: 800px;
+  margin: 0 auto; }
+  .admin button {
+    float: right;
+    margin-bottom: 10px; }
+  .admin ul {
+    clear: both;
+    list-style: none;
+    margin: 0 0 20px 0; }
+    .admin ul ul {
+      border: none;
+      padding: 0; }
+      .admin ul ul li {
+        border: none;
+        margin: 0;
+        padding: 0; }
+    .admin ul li {
+      width: 100%;
+      border: 1px solid #666;
+      border-radius: 5px;
+      position: relative;
+      margin-bottom: 20px;
+      padding: 10px; }
+      .admin ul li span {
+        font-size: 1.5em;
+        display: inline-block;
+        margin-right: 20px; }
+        .admin ul li span.total {
+          font-size: 1em; }
+        .admin ul li span:last-child {
+          margin-bottom: 20px; }
+      .admin ul li .progress {
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 5px; }
+      .admin ul li .progress-bar {
+        font-size: 1.5em;
+        line-height: 30px; }
+      .admin ul li .delete {
+        position: absolute;
+        right: 10px;
+        font-size: 1.5em;
+        text-decoration: none; }
+        .admin ul li .delete:hover {
+          color: #e74c3c; }

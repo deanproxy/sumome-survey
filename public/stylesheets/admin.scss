@@ -1,0 +1,79 @@
+@import 'global';
+
+.modal-dialog {
+    width: 800px;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            margin-bottom: 10px;
+            &:first-child {
+                margin-bottom: 20px;
+                }
+            input {
+                width: 100%;
+            }
+        }
+    }
+    background-color: #fff;
+}
+.admin {
+    width: 800px;
+    margin: 0 auto;
+    button {
+        float: right;
+        margin-bottom: 10px;
+    }
+    ul {
+        clear: both;
+        list-style: none;
+        margin: 0 0 20px 0;
+        ul {
+            border: none;
+            padding: 0;
+            li {
+                border: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        li {
+            width: 100%;
+            border: 1px solid #666;
+            border-radius: 5px;
+            position: relative;
+            margin-bottom: 20px;
+            padding: 10px;
+            span {
+                font-size: 1.5em;
+                display: inline-block;
+                margin-right: 20px;
+                &.total {
+                    font-size: 1em;
+                }
+                &:last-child {
+                    margin-bottom: 20px;
+                }
+            }
+            .progress {
+                height: 30px;
+                line-height: 30px;
+                margin-bottom: 5px;
+            }
+            .progress-bar {
+                font-size: 1.5em;
+                line-height: 30px;
+            }
+            .delete {
+                position: absolute;
+                right: 10px;
+                font-size: 1.5em;
+                text-decoration: none;
+                &:hover {
+                    color: $danger;
+                }
+            }
+        }
+    }
+}

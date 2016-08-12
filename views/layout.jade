@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title the survey app
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+      
+    link(rel='stylesheet', href='/stylesheets/font-awesome.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav(class='navbar navbar-default navbar-fixed-top')
+      div(class='container-fluid')
+        div(class='navbar-header')
+          a(href='/', class='navbar-brand') the survey app
+        div(class='collapse navbar-collapse')
+          ul(class='nav navbar-nav navbar-right')
+            li
+              a(href='/admin') admin 
+            if (user)
+              li
+                a(href='/logout') logout
+
+
+    div(id='modal', class='modal fade', tabindex='-1', role='dialog')
+    block content

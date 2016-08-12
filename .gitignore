@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+*.log
+db/*
+bundle.js
+bundle.js.map
+public/stylesheets/style.css
+public/bundle/*.js
