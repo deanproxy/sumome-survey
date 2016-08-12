@@ -48,7 +48,7 @@ gulp.task('watch', watch);
 gulp.task('sass', buildSass);
 
 function buildSass() {
-  gulp.src('public/stylesheets/**/*.scss')
+  return gulp.src('public/stylesheets/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('public/stylesheets/'))
 }
@@ -61,24 +61,23 @@ function build() {
       debug: false
     });
 
-    buildSass();
-    b.transform(babelify, {presets: ['es2015', 'react']})
-    .bundle()
-    .on('error', gutil.log.bind(gutil, "Browserify Error"))
-    .pipe(source(path.basename(file)))
-    .pipe(buffer())
-    .pipe(uglify())
-    .pipe(sourcemaps.init({loadMaps:true}))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(bundleOpts.jsDest))
+    return b.transform(babelify, {presets: ['es2015', 'react']})
+      .bundle()
+      .on('error', gutil.log.bind(gutil, "Browserify Error"))
+      .pipe(source(path.basename(file)))
+      .pipe(buffer())
+      .pipe(uglify())
+      .pipe(sourcemaps.init({loadMaps:true}))
+      .pipe(sourcemaps.write('./'))
+      .pipe(gulp.dest(bundleOpts.jsDest))
   });
+  return buildSass();
 }
 
 /* Watch: Used to watch files for changes for development use. */
 function watch() {
-  buildSass();
   gulp.watch('public/stylesheets/**/*.scss', ['sass']);
-  return _.each(watchBundles, watch => {
+  _.each(watchBundles, watch => {
     watch.watch.bundle()
       .on('error', gutil.log.bind(gutil, "Browserify Error"))
       .pipe(source(watch.filename))
@@ -87,5 +86,6 @@ function watch() {
       .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest(bundleOpts.jsDest))
   });
+  return buildSass();
 }
 
