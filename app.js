@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var options = db[app.get('env')];
 options.user = options.username;
-options.createDatabaseTable = false;
+options.createDatabaseTable = true;
 var sessionStore = new MySQLStore(options);
 
 
