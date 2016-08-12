@@ -61,6 +61,7 @@ function build() {
         debug: false
     });
 
+    buildSass();
     b.transform(babelify, {presets: ['es2015', 'react']})
       .bundle()
       .on('error', gutil.log.bind(gutil, "Browserify Error"))
