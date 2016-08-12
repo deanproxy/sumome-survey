@@ -62,12 +62,6 @@ router.post('/admin/question', loginMiddleware, function(req, res) {
   });
 });
 router.put('/admin/question/:id', loginMiddleware, function(req, res) {
-  function saveNewOption(option) {
-    models.Option.create({
-      title: opt.title,
-      QuestionId: question.id
-    });
-  }
 
   function eachEdit(opt) {
     models.Option.findById(opt.id)
@@ -84,7 +78,12 @@ router.put('/admin/question/:id', loginMiddleware, function(req, res) {
       var edits = req.body.options.filter(opt => opt.id);
       var additions = req.body.options.filter(opt => !opt.id);
       _.each(edits, eachEdit);
-      _.each(additions, saveNewOption);
+      _.each(additions, option => {
+        models.Option.create({
+          title: option.title,
+          QuestionId: question.id
+        });
+      });
       res.json(question.toJSON());
     });
 })

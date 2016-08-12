@@ -107,7 +107,7 @@ class CreateSurvey extends React.Component {
     }
 
     render() {
-      const options = this.state.question.Options.map((o, i) => {
+      let options = this.state.question.Options.map((o, i) => {
         return (
           <li key={o.id}>
             <input type="text" name="options[]" value={o.title} 
@@ -115,6 +115,11 @@ class CreateSurvey extends React.Component {
           </li>
         );
       });
+
+      if (options.length === 0) {
+        options = <li><input type="text" name="options[]" placeholder="an option" required/></li>;
+      }
+
       return (
         <div className="modal-dialog">
           <form onSubmit={this.save}>
