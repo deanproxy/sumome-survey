@@ -5,4 +5,4 @@ db/*
 bundle.js
 bundle.js.map
 public/stylesheets/style.css
-public/bundle/*.js
+public/javascripts/bundle
