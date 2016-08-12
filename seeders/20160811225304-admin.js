@@ -18,8 +18,8 @@ module.exports = {
     return queryInterface.bulkInsert('Users', [{
       username: username,
       password: Password.hash('badpassword'),
-      updatedAt: Date.now(),
-      createdAt: Date.now()
+      updatedAt: new Date(),
+      createdAt: new Date()
     }]);
   },
 

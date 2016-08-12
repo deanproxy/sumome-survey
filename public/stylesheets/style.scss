@@ -7,6 +7,8 @@
     font-size: 1.5em;
     padding: 10px;
     outline-color: #aaa;
+    border: 1px solid #aaa;
+    border-radius: 2px;
 }
 input {
     @include input-mixin;
@@ -18,9 +20,12 @@ textarea {
     margin-top: 90px;
 }
 
+.container {
+    width: 800px;
+}
 .question {
     margin: 0 auto;
-    width: 600px;
+    padding: 10px;
     ul {
         list-style: none;
         margin: 0;
@@ -59,5 +64,10 @@ textarea {
 }
 .thanks {
     margin: 0 auto;
-    width: 600px;
+}
+
+@media(max-width: 721px) {
+    .container {
+        width: 100%;
+    }
 }

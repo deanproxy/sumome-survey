@@ -97,7 +97,7 @@ class Index extends React.Component {
         return <li key={option.id}><a href onClick={this.select} data-option-id={option.id}>{option.title}</a></li>;
       });
       return (
-        <div className="question">
+        <div className="question container">
           <h2>{this.state.question.title}</h2>
           <ul>
             {options}
@@ -107,9 +107,9 @@ class Index extends React.Component {
       );
     } else {
       return (
-        <div className="question">
-          <h2 className="text-info">sorry...</h2>
-          <h4>there doesn't appear to be anymore survey questions for you right now.</h4>
+        <div className="question container">
+          <h2 className="text-info">thanks!</h2>
+          <h4>you're plum out of survey's to take. but thanks for takin' them!</h4>
         </div>
       );
     }

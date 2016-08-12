@@ -236,7 +236,7 @@ class Admin extends React.Component {
       questions = <li>yar... there be no survey's here...</li>;
     }
     return (
-      <div className="admin">
+      <div className="admin container">
         <button className="btn btn-primary" onClick={this.create}>add survey</button>
         <ul id="questions">
           {questions}
